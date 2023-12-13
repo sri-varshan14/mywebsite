@@ -1,27 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nova+Square&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.h1 {
+    @apply text-[34px] lg:text-[34px]  md:text-[24px] sm:text-[24px] leading-[34px] tracking-[-1px];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.h2 {
+    @apply text-[30px] lg:text-[24px] md:text-[18px] sm:text-[18px]  leading-[32px] tracking-[-0.8px];
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.h3 {
+    @apply text-[24px] lg:text-[20px] md:text-[18px] sm:text-[18px] leading-[26px] tracking-[-0.5px];
+}
+
+.h4{
+    @apply text-[20px] lg:text-[18px] md:text-[18px] sm:text-[18px] leading-[22px] tracking-[-0.4px];
+}
+
+.h5{
+    @apply text-[18px] lg:text-[16px] md:text-[16px] sm:text-[16px] leading-[20px] tracking-[-0.2px];
+}
+
+.h6{
+    @apply text-[16px] lg:text-[16px] md:text-[16px] sm:text-[16px] leading-[18px] tracking-[-0.1px];
+}
+
+.d1 {
+    @apply text-[60px] lg:text-[50px] md:text-[30px] sm:text-[30px] leading-[60px] tracking-[-2px];
+}
+
+.d2 {
+    @apply text-[50px] lg:text-[40px] md:text-[24px] sm:text-[24px] leading-[50px] tracking-[-1.6px];
+}
+
+.d3 {
+    @apply text-[40px] lg:text-[34px] md:text-[24px] sm:text-[24px] leading-[40px] tracking-[-1px];
+}
+
+.d4 {
+    @apply text-[34px] lg:text-[24px] md:text-[18px] sm:text-[18px] leading-[34px] tracking-[-1px];
+}
+
+.lead {
+    @apply text-[20px] lg:text-[18px] md:text-[16px] sm:text-[16px] leading-[30px] tracking-[-0.25px];
+}
+
+.body {
+    @apply text-[16px] lg:text-[16px] md:text-[16px] sm:text-[16px] leading-[24px] tracking-[-0.1px];
+}
+
+.small {
+    @apply text-[14px] lg:text-[14px] md:text-[14px] sm:text-[14px] leading-[16px] tracking-[-0.1px];
+}
+
+h1 {
+    @apply h1 font-bold ;
+}
+
+h2 {
+    @apply h2 font-bold;
+}
+
+h3 {
+    @apply h3 font-bold;
+}
+
+h4 {
+    @apply h4 font-bold;
+}
+
+h5 {
+    @apply h5;
+}
+
+h6 {
+    @apply h6;
+}
+
+p {
+    @apply body;
 }

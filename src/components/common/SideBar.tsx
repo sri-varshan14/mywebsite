@@ -11,14 +11,14 @@ import SearchSVG from "../svg/SearchSVG";
 
 const SideBar = () => {
     let windowSize = useWindowSize();
-    const cssClasses = "w-6 stroke-base-inherit hover:stroke-inherit relative mx-auto my-1 sm:my-0";
+    const cssClasses = "w-6 stroke-base-inherit hover:stroke-inherit relative mx-auto my-1 sm:my-0 md:my-0";
     return (
-        <header className="h-screen sm:h-14 sm:w-full w-14 bg-base-100 fixed sm:bottom-0 left-0">
-            <div className="h-full flex flex-col items-center justify-between sm:justify-center py-5 sm:py-0 border-r-2 sm:border-t-2 sm:border-r-0 border-r-base-content">
-                {windowSize.width >= 481 &&
+        <header className="h-screen sm:h-14 md:h-14 sm:w-full md:w-full w-14 bg-base-100 fixed sm:bottom-0 md:bottom-0 left-0 z-[2000]">
+            <div className="h-full flex flex-col items-center justify-between sm:justify-center md:justify-center py-5 sm:py-0 md:py-0 border-r-2 sm:border-t-2 md:border-t-2 sm:border-r-0 md:border-r-0 border-r-base-content border-t-base-content">
+                {windowSize.width >= 769 &&
                     <LogoSVG cssClasses="w-6 fill-base-content my-1 " />
                 }
-                <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="w-full flex flex-col sm:flex-row md:flex-row items-center justify-center gap-4">
                     <SideBarIconSlot tooltip_data="Home">
                         <HomeSVG cssClasses={cssClasses} />
                     </SideBarIconSlot>
@@ -35,7 +35,7 @@ const SideBar = () => {
                         <ArrowUpRightSVG cssClasses={cssClasses} />
                     </SideBarIconSlot>
                 </div>
-                {windowSize.width >= 481 &&
+                {windowSize.width >= 769 &&
                     <MenuSVG cssClasses={cssClasses} />
                 }
             </div>

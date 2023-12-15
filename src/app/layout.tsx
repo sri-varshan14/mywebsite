@@ -1,3 +1,5 @@
+import { ThemeProvider } from '@/hooks/ThemeProvider'
+import TRPCProvider from './_trpc/TRPCProvider'
 import './globals.css'
 
 export default function RootLayout({
@@ -7,7 +9,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <body>
+                <ThemeProvider>
+                    <TRPCProvider>
+                        {children}
+                    </TRPCProvider>
+                </ThemeProvider>
+            </body>
         </html>
     )
 }

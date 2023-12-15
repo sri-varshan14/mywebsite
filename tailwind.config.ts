@@ -7,13 +7,22 @@ const config: Config = {
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
+        minWidth: {
+            '1/2': '50%'
+        },
         extend: {
             fontFamily: {
                 'notosans': ['Noto Sans', 'sans-serif'],
                 'novasquare': ['Nova Square', 'sans-serif'],
                 'poppins': ['Poppins', 'sans-serif'],
                 'roboto': ['Roboto', 'sans-serif'],
-                'robotocon': ['Roboto Condensed', 'sans-serif']
+                'robotocon': ['Roboto Condensed', 'sans-serif'],
+                'preahvihear': ['Preahvihear', 'sans-serif'],
+                'bangers': ['Bangers', 'sans-serif'],
+                'audiowide': ['Audiowide', 'sans-serif']
+            },
+            backgroundImage: {
+                'profile': "url('/image.png')",
             }
         },
         screens: {

@@ -1,15 +1,15 @@
-import HomePage from "@/components/route/HomePage";
 import { Metadata } from "next";
+import BlogPage from "@/components/route/BlogPage";
 
 export const metadata: Metadata = {
-    title: 'Home | Srivarshan',
-    description: 'Unleashing imagination through design, elevating ideas into immersive experiences.',
+    title: 'Blogs | Srivarshan',
+    description: '',
 };
 
-export default function Home() {
+export default function Blog() {
     return (
         <main className="w-screen min-h-screen bg-base-100 relative">
-            <HomePage />
+            <BlogPage />
         </main>
     )
 }

@@ -1,5 +1,4 @@
 "use client"
-import { useWindowSize } from "@/hooks/WindowSize";
 import AboutArea from "./HeroSection/AboutArea";
 import DetailArea from "./HeroSection/DetailArea";
 import StickyBox from "react-sticky-box";

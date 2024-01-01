@@ -5,7 +5,6 @@ import postgres from 'postgres';
 import * as dotenv from "dotenv";
 dotenv.config();
 
-console.log(process.env.DB_URL!)
 const migrationClient = postgres(process.env.DB_URL!, { max: 1 });
 
 migrate(drizzle(migrationClient), { migrationsFolder: "drizzle" })

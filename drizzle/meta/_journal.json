@@ -8,6 +8,20 @@
       "when": 1704078896014,
       "tag": "0000_black_the_hand",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1704081695887,
+      "tag": "0001_complex_betty_ross",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1704105472514,
+      "tag": "0002_magenta_genesis",
+      "breakpoints": true
     }
   ]
 }

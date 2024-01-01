@@ -147,3 +147,9 @@ p {
   margin-right: 30px;
 }
 
+.blog h1,h2,h3,h4,h5 {
+    @apply my-2;
+}
+.blog p {
+    @apply lead font-normal font-worksans tracking-tighter;
+}

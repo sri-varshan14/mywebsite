@@ -1,3 +1,4 @@
+"use client"
 import { ThemeProvider } from '@/hooks/ThemeProvider'
 import TRPCProvider from './_trpc/TRPCProvider'
 import './globals.css'
@@ -10,11 +11,11 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <ThemeProvider>
-                    <TRPCProvider>
+                <TRPCProvider>
+                    <ThemeProvider>
                         {children}
-                    </TRPCProvider>
-                </ThemeProvider>
+                    </ThemeProvider>
+                </TRPCProvider>
             </body>
         </html>
     )

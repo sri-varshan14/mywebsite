@@ -19,7 +19,10 @@ const config: Config = {
                 'robotocon': ['Roboto Condensed', 'sans-serif'],
                 'preahvihear': ['Preahvihear', 'sans-serif'],
                 'bangers': ['Bangers', 'sans-serif'],
-                'audiowide': ['Audiowide', 'sans-serif']
+                'audiowide': ['Audiowide', 'sans-serif'],
+                'raleway': ['Raleway', 'sans-serif'],
+                'worksans': ['Work Sans', 'sans-serif'],
+                'jetbrains': ['JetBrains Mono', 'sans-serif']
             },
             backgroundImage: {
                 'profile': "url('/image.png')",

@@ -6,7 +6,10 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "db:generate": "drizzle-kit generate:pg",
+        "db:push": "drizzle-kit push:pg",
+        "db:migrate": "node -r esbuild-register ./src/db/migrate.ts"
     },
     "dependencies": {
         "@motionone/utils": "^10.16.3",
@@ -14,18 +17,25 @@
         "@trpc/client": "^10.44.1",
         "@trpc/react-query": "^10.44.1",
         "@trpc/server": "^10.44.1",
+        "dotenv": "^16.3.1",
+        "drizzle-orm": "^0.29.2",
         "framer-motion": "^10.16.16",
         "next": "14.0.3",
+        "pg": "^8.11.3",
+        "postgres": "^3.4.3",
         "react": "^18",
         "react-dom": "^18",
         "react-sticky-box": "^2.0.5"
     },
     "devDependencies": {
         "@types/node": "^20",
+        "@types/pg": "^8.10.9",
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "autoprefixer": "^10.4.16",
         "daisyui": "^4.4.19",
+        "drizzle-kit": "^0.20.9",
+        "esbuild-register": "^3.5.0",
         "eslint": "^8",
         "eslint-config-next": "14.0.3",
         "postcss": "^8.4.32",

@@ -9,7 +9,7 @@ const AboutArea = () => {
     const stickyRef = useStickyBox({ offsetTop: 20, offsetBottom: 20 })
     return (
         <aside ref={stickyRef}>
-            <div className="sm:w-full md:w-full lg:w-full px-40 sm:px-5 md:px-5 lg:px-20 bg-base-100 ">
+            <div className="sm:w-full md:w-full lg:w-full px-40 sm:px-5 md:px-5 lg:px-20 bg-base-100 z-50">
                 <div className='flex flex-col items-end sm:items-center md:items-center'>
                     <div className='sm:pt-14 md:pt-14'>
                         <Image className="w-44 object-contain aspect-square rounded-2xl sm:mx-auto md:mx-auto" src={ProfileImage} alt="" />
@@ -21,7 +21,7 @@ const AboutArea = () => {
                         <Link className='underline ' href="https://github.com/sri-varshan14" target='_blank'>
                             <span className='flex pt-3'>
                                 <GithubSVG cssClasses='w-5 fill-base-content mx-3' />
-                                <p>sri-varshan14</p>
+                                <p className='underline'>sri-varshan14</p>
                                 <ArrowUpRightSVG cssClasses='w-4' />
                             </span>
                         </Link>

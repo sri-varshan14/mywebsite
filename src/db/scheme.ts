@@ -12,4 +12,3 @@ export const blog = pgTable('users', {
     date: date('date').default(sql`CURRENT_DATE`).notNull()
 });
 
-export const BlogSelectType = blog.$inferSelect;

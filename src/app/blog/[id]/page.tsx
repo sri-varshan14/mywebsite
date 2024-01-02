@@ -1,10 +1,30 @@
+import { serverClient } from "@/app/_trpc/serverClient";
+import getBaseUrl from "@/app/utils/getBaseUrl";
 import Blog from "@/components/route/Blog";
 
-const DynamicBlogPost = ({ params }: { params: { id: string } }) => {
+export async function generateMetadata({ params }: { params: { id: string } }) {
+    const blog_detail = await serverClient.getBlogDetail(params.id);
+    return {
+        title: blog_detail.title,
+        description: blog_detail.description,
+        openGraph: {
+            title: blog_detail.title,
+            description: blog_detail.description,
+            url: getBaseUrl() + "/blog" + params.id,
+            images: [blog_detail.thumbnail]
+        }
+    }
+}
+
+const DynamicBlogPost = async ({ params }: { params: { id: string } }) => {
+    const blog_content = await serverClient.getBlogContent(params.id);
+    const blog_detail = await serverClient.getBlogDetail(params.id)
     return (
-        <main className="w-screen min-h-screen bg-base-100 relative">
-            <Blog id={params.id} />
-        </main>
+        <>
+            <main className="w-screen min-h-screen bg-base-100 relative">
+                <Blog blog_content={blog_content} blog_detail={blog_detail} />
+            </main>
+        </>
     )
 }
 

@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 
-const SideBarIconSlot = ({ children, tooltip_data }: { children: ReactNode, tooltip_data: string }) => {
+const SideBarIconSlot = ({ children }: { children: ReactNode }) => {
     return (
-        <span className="w-full relative before:content-[' '] before:w-1 before:h-full before:absolute hover:before:bg-primary before:left-0 before:transition-all before:duration-300 stroke-base-content hover:stroke-primary" data-tip={tooltip_data}>
+        <span className="w-full relative before:content-[' '] before:w-1 before:h-full before:absolute hover:before:bg-base-content before:left-0 before:transition-all before:duration-300 stroke-base-content hover:stroke-base-content ">
             {children}
         </span>
     )

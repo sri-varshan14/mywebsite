@@ -5,7 +5,7 @@ import SideBar from '../common/SideBar'
 import ThemeToggler from '../common/ThemeToggler'
 import PageContent from './Blog/PageContent'
 
-const Blog = ({ blog_content, blog_detail }: { blog_content: string, blog_detail: BlogListSlotType }) => {
+const DynamicBlog = ({ blog_content, blog_detail }: { blog_content: string, blog_detail: BlogListSlotType }) => {
     return (
         <>
             <SideBar />
@@ -16,4 +16,4 @@ const Blog = ({ blog_content, blog_detail }: { blog_content: string, blog_detail
     )
 }
 
-export default Blog;
+export default DynamicBlog;

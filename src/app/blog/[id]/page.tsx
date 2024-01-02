@@ -1,6 +1,6 @@
 import { serverClient } from "@/app/_trpc/serverClient";
 import getBaseUrl from "@/app/utils/getBaseUrl";
-import Blog from "@/components/route/Blog";
+import DynamicBlog from "@/components/route/DynamicBlog";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const blog_detail = await serverClient.getBlogDetail(params.id);
@@ -22,7 +22,7 @@ const DynamicBlogPost = async ({ params }: { params: { id: string } }) => {
     return (
         <>
             <main className="w-screen min-h-screen bg-base-100 relative">
-                <Blog blog_content={blog_content} blog_detail={blog_detail} />
+                <DynamicBlog blog_content={blog_content} blog_detail={blog_detail} />
             </main>
         </>
     )

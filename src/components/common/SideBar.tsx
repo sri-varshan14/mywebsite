@@ -10,6 +10,7 @@ import BriefcaseSVG from "../svg/BriefcaseSVG";
 import MessageSquareSVG from "../svg/MessageSquare";
 import Link from "next/link";
 import { useState } from "react";
+import Spotlight from "./Spotlight";
 
 const SideBar = () => {
     const [toggleSideBar, setToggleSideBar] = useState(false);
@@ -60,6 +61,9 @@ const SideBar = () => {
                     <span onClick={() => setToggleSideBar(!toggleSideBar)}>
                         <MenuSVG cssClasses={cssClasses + " hover:stroke-base-content"} />
                     </span>
+                }
+                {
+                    searchBar && <Spotlight setSearchBar={setSearchBar} />
                 }
             </div>
         </header>

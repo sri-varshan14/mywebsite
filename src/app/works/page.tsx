@@ -1,3 +1,4 @@
+import UnderDevelopment from "@/components/route/UnderDevelopment";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,9 +6,10 @@ export const metadata: Metadata = {
     description: '',
 };
 
-export default function Blog() {
+export default function Work() {
     return (
         <main className="w-screen min-h-screen bg-base-100 relative">
+            <UnderDevelopment />
         </main>
     )
 }

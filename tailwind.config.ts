@@ -22,10 +22,12 @@ const config: Config = {
                 'audiowide': ['Audiowide', 'sans-serif'],
                 'raleway': ['Raleway', 'sans-serif'],
                 'worksans': ['Work Sans', 'sans-serif'],
-                'jetbrains': ['JetBrains Mono', 'sans-serif']
+                'jetbrains': ['JetBrains Mono', 'sans-serif'],
+                'inter': ['Inter', 'sans-serif']
             },
             backgroundImage: {
                 'profile': "url('/image.png')",
+                'transparent': "url('/transparent.png')"
             }
         },
         screens: {

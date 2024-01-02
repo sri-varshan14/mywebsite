@@ -11,7 +11,7 @@ const PageContent = ({ blog_content, blog_detail }: { blog_content: string, blog
                 <h1 className='d3 font-raleway py-8'>{blog_detail?.title}</h1>
                 <div className='flex flex-wrap'>
                     {
-                        blog_detail?.category.split(' ').map((tag) => {
+                        blog_detail?.category.split('-').map((tag) => {
                             return <p className="bg-base-300 px-3 rounded-xl" key={tag}>{tag}</p>
                         })
                     }

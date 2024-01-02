@@ -22,7 +22,7 @@ const BlogListSlot = ({ blog }: { blog: BlogListSlotType }) => {
                     <p>{blog.readtime} min read</p>
                     <p>&nbsp;&#183;&nbsp;</p>
                     {
-                        blog.category.split(' ').map((tag) => {
+                        blog.category.split('-').map((tag) => {
                             return <p className="bg-base-300 px-3 rounded-xl" key={tag}>{tag}</p>
                         })
                     }

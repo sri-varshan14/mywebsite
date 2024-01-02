@@ -1,3 +1,4 @@
+import Footer from "@/components/common/Footer";
 import HomePage from "@/components/route/HomePage";
 import { Metadata } from "next";
 
@@ -10,6 +11,7 @@ export default function Home() {
     return (
         <main className="w-screen min-h-screen bg-base-100 relative">
             <HomePage />
+            <Footer />
         </main>
     )
 }

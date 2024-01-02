@@ -27,6 +27,16 @@ export const appRouter = router({
             const { input } = opts;
             let result = await db.select().from(blog).where(eq(blog.id, input))
             return result[0]
+        }),
+    getSearchDetails: publicProcedure
+        .query(async (opts) => {
+            let result = await db.select({
+                id: blog.id,
+                title: blog.title,
+                description: blog.description,
+                tags: blog.category
+            }).from(blog);
+            return result;
         })
 })
 

@@ -15,6 +15,7 @@ interface SearchResult {
 }
 
 const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boolean>> }) => {
+    let replaceChar = '$'
     const [fetch, setFetch] = useState(false);
     const [content, setContent] = useState(Array<string>);
     const [filterResult, setFilterResult] = useState(Array<SearchResult>);
@@ -24,7 +25,7 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
         if (result.data != undefined && !fetch) {
             const content_arr = result.data!.map(entry => {
-                return entry.id + " " + entry.title.replaceAll(' ', '_') + " " + entry.description.replaceAll(' ', '_') + " " + entry.tags;
+                return entry.id + " " + entry.title.replaceAll(' ', replaceChar) + " " + entry.description.replaceAll(' ', replaceChar) + " " + entry.tags;
             }) as string[];
             setContent(content_arr);
             setFetch(true);
@@ -37,18 +38,21 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
             const filter_value = fzf.find(event.currentTarget.value)
             const filter_result = filter_value.map((a) => {
                 let [id, title, description, tags] = a.item.split(' ');
-                console.log(id)
-                console.log(title)
-                console.log(description)
-                console.log(tags)
                 return {
                     id: id,
-                    title: title.replaceAll('_', ' '),
-                    description: description.replaceAll('_', ' '),
+                    title: title.replaceAll(replaceChar, ' '),
+                    description: description.replaceAll(replaceChar, ' '),
                     tags: tags.split("-")
                 } as SearchResult;
             })
             setFilterResult(filter_result)
+        }
+    }
+
+    function handleKeyBoardInput(event: React.KeyboardEvent<HTMLElement>) {
+        console.log(event.key)
+        if (event.key == "Escape") {
+            setSearchBar(false)
         }
     }
     return (
@@ -58,11 +62,14 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
                     <div className='w-full h-20 bg-base-100 rounded-xl border-2 border-base-content flex items-center overflow-hidden'>
                         <SearchSVG cssClasses='w-10 m-5' />
                         <input
-                            className='h-full bg-base-100 w-[calc(100%_-_3.75rem)] outline-none lead font-inter'
+                            className='h-full bg-base-100 w-[calc(100%_-_7.5rem)] outline-none lead font-inter'
                             type='text'
                             placeholder='Search'
                             onChange={handleChange}
+                            onKeyDown={handleKeyBoardInput}
+                            autoFocus={true}
                         />
+                        <kbd className="kbd kbd-md m-5">Esc</kbd>
                     </div>
                     {
                         filterResult.length != 0 &&
@@ -90,7 +97,7 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
                         </div>
                     }
                 </span >
-                <div className='w-full h-screen absolute' onClick={() => setSearchBar(false)}></div>
+                <div className='w-full h-screen absolute backdrop-blur-sm' onClick={() => setSearchBar(false)}></div>
             </span >
         </div >
     )

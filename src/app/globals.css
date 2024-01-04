@@ -148,8 +148,13 @@ p {
 }
 
 .blog h1,h2,h3,h4,h5 {
-    @apply my-2;
+    @apply font-poppins my-2;
 }
 .blog p {
-    @apply lead font-normal font-worksans tracking-tighter;
+    @apply lead font-normal font-inter tracking-tighter py-4;
 }
+
+.blog img {
+    @apply mx-auto pb-5;
+}
+

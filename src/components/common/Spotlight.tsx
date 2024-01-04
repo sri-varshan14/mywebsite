@@ -6,6 +6,7 @@ import { type FzfResultItem, Fzf } from 'fzf'
 import Link from 'next/link';
 import BookSVG from '../svg/BookSVG';
 import ArrowUpRightSVG from '../svg/ArrowUpRightSVG';
+import { motion } from 'framer-motion';
 
 interface SearchResult {
     id: string,
@@ -36,7 +37,7 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
         }
         else {
             const filter_value = fzf.find(event.currentTarget.value)
-            const filter_result = filter_value.map((a) => {
+            const filter_result = filter_value.map(a => {
                 let [id, title, description, tags] = a.item.split(' ');
                 return {
                     id: id,
@@ -50,7 +51,6 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
     }
 
     function handleKeyBoardInput(event: React.KeyboardEvent<HTMLElement>) {
-        console.log(event.key)
         if (event.key == "Escape") {
             setSearchBar(false)
         }
@@ -59,7 +59,12 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
         <div className='fixed w-screen h-screen top-0 left-0 z-1800 z-[1800]'>
             <span className='flex justify-center h-full w-full relative'  >
                 <span className='w-1/2 h-fit rounded-xl z-[1900] mt-[5vw]' onClick={() => setSearchBar(true)}>
-                    <div className='w-full h-20 bg-base-100 rounded-xl border-2 border-base-content flex items-center overflow-hidden'>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.5 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.5 }}
+                        transition={{ ease: "easeOut", duration: 0.05 }}
+                        className='w-full h-20 bg-base-100 rounded-xl border-2 border-base-content flex items-center overflow-hidden'>
                         <SearchSVG cssClasses='w-10 m-5' />
                         <input
                             className='h-full bg-base-100 w-[calc(100%_-_7.5rem)] outline-none lead font-inter'
@@ -70,7 +75,7 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
                             autoFocus={true}
                         />
                         <kbd className="kbd kbd-md m-5">Esc</kbd>
-                    </div>
+                    </motion.div>
                     {
                         filterResult.length != 0 &&
                         <div className='w-full mt-5 bg-base-100 max-h-[30rem] flex flex-col rounded-xl border-2 border-base-content gap-5'>

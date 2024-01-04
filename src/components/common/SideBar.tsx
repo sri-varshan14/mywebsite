@@ -11,6 +11,7 @@ import MessageSquareSVG from "../svg/MessageSquare";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Spotlight from "./Spotlight";
+import { AnimatePresence } from "framer-motion";
 
 const SideBar = () => {
     const [toggleSideBar, setToggleSideBar] = useState(false);
@@ -77,9 +78,11 @@ const SideBar = () => {
                             <MenuSVG cssClasses={cssClasses + " hover:stroke-base-content"} />
                         </span>
                     }
-                    {
-                        searchBar && <Spotlight setSearchBar={setSearchBar} />
-                    }
+                    <AnimatePresence>
+                        {
+                            searchBar && <Spotlight setSearchBar={setSearchBar} />
+                        }
+                    </AnimatePresence>
                 </div>
             </header>
         </>

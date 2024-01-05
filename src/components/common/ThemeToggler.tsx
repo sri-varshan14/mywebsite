@@ -2,16 +2,21 @@
 import ThemeContext from "@/hooks/ThemeProvider";
 import { useContext } from "react";
 import { motion } from "framer-motion";
+import { useWindowSize } from "@/hooks/WindowSize";
 const ThemeToggler = () => {
+    const windowSize = useWindowSize();
     const theme = useContext(ThemeContext);
     return (
         <div className="flex absolute top-5 right-5 gap-4">
-            <motion.div drag dragConstraints={{
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-            }} className="bg-base-100 border-[1px] border-base-content px-4 flex items-center gap-1 rounded-full">Press <kbd className="kbd kbd-sm">⌘</kbd> + <kbd className="kbd kbd-sm">E</kbd> to Search</motion.div>
+            {
+                windowSize.width >= 1024 &&
+                <motion.div drag dragConstraints={{
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                }} className="bg-base-100 border-[1px] border-base-content px-4 flex items-center gap-1 rounded-full">Press <kbd className="kbd kbd-sm">⌘</kbd> + <kbd className="kbd kbd-sm">E</kbd> to Search</motion.div>
+            }
             <motion.label drag dragConstraints={{
                 top: 0,
                 left: 0,

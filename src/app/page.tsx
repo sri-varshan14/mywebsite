@@ -1,5 +1,5 @@
-import Footer from "@/components/common/Footer";
 import HomePage from "@/components/route/HomePage";
+import { useWindowSize } from "@/hooks/WindowSize";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -11,7 +11,6 @@ export default function Home() {
     return (
         <main className="w-screen min-h-screen bg-base-100 relative">
             <HomePage />
-            <Footer />
         </main>
     )
 }

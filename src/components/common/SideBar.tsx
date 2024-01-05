@@ -34,14 +34,14 @@ const SideBar = () => {
 
     return (
         <>
-            <header className="h-screen sm:h-14 md:h-14 sm:w-full md:w-full w-14 bg-base-100 fixed sm:bottom-0 md:bottom-0 left-0 z-[2000]" onKeyUp={handleKeyPress}>
-                <div className="h-full flex flex-col items-center justify-between sm:justify-center md:justify-center py-5 sm:py-0 md:py-0 border-r-2 sm:border-t-2 md:border-t-2 sm:border-r-0 md:border-r-0 border-r-base-content border-t-base-content">
-                    {windowSize.width >= 769 &&
+            <header className="h-screen sm:h-14 md:h-14 lg:h-14 sm:w-full md:w-full lg:w-full w-14 bg-base-100 fixed sm:bottom-0 md:bottom-0 lg:bottom-0 left-0 z-[2000]" onKeyUp={handleKeyPress}>
+                <div className="h-full flex flex-col items-center justify-between sm:justify-center md:justify-center lg:justify-center py-5 sm:py-0 md:py-0 lg:py-0 border-r-2 sm:border-t-2 md:border-t-2 lg:border-t-2 sm:border-r-0 md:border-r-0 lg:border-r-0 border-r-base-content border-t-base-content">
+                    {windowSize.width >= 1024 &&
                         <Link href="/">
                             <LogoSVG cssClasses="w-6 fill-base-content my-1 " />
                         </Link>
                     }
-                    <div className="w-full flex flex-col sm:flex-row md:flex-row items-center justify-center gap-4">
+                    <div className="w-full flex flex-col sm:flex-row md:flex-row lg:flex-row items-center justify-center gap-4">
                         <SideBarIconSlot>
                             <Link className="flex flex-col items-center " href="/">
                                 <HomeSVG cssClasses={cssClasses} />
@@ -73,7 +73,7 @@ const SideBar = () => {
                             </Link>
                         </SideBarIconSlot>
                     </div>
-                    {windowSize.width >= 769 &&
+                    {windowSize.width >= 1024 &&
                         <span onClick={() => setToggleSideBar(!toggleSideBar)}>
                             <MenuSVG cssClasses={cssClasses + " hover:stroke-base-content"} />
                         </span>

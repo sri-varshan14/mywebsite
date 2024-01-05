@@ -10,12 +10,12 @@ const BlogListSlot = ({ blog }: { blog: BlogListSlotType }) => {
     const alt_txt = blog.title + " thumbnail";
     const blog_route = "/blog/" + blog.id
     return (
-        <div className="max-w-5xl hover:shadow-xl border-[1px] rounded-xl border-base-content px-10 py-5 duration-300 transition-all">
-            <div className="max-w-3xl flex sm:flex-col-reverse md:flex-col-reverse gap-4">
+        <div className="max-w-5xl hover:shadow-xl border-[2px] rounded-xl border-base-content px-10 sm:px-4 py-5 duration-300 transition-all">
+            <div className="max-w-3xl sm:w-full flex sm:flex-col-reverse md:flex-col-reverse lg:flex-col-reverse">
                 <div className="flex flex-col">
                     <Link href={blog_route}>
-                        <h3 className="font-bold font-raleway py-2 max-w-xl">{blog.title}</h3>
-                        <p className="font-roboto font-light py-2 max-w-lg">{blog.description}</p>
+                        <h3 className="font-bold font-raleway max-w-xl">{blog.title}</h3>
+                        <p className="font-roboto font-light max-w-lg">{blog.description}</p>
                     </Link>
                     <div className="flex font-light">
                         <p>{date}</p>

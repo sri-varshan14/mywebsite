@@ -7,6 +7,8 @@ import Link from 'next/link';
 import BookSVG from '../svg/BookSVG';
 import ArrowUpRightSVG from '../svg/ArrowUpRightSVG';
 import { motion } from 'framer-motion';
+import { useWindowSize } from '@/hooks/WindowSize';
+import CrossSVG from '../svg/CrossSVG';
 
 interface SearchResult {
     id: string,
@@ -21,6 +23,7 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
     const [content, setContent] = useState(Array<string>);
     const [filterResult, setFilterResult] = useState(Array<SearchResult>);
     const result = trpc.getSearchDetails.useQuery();
+    const windowSize = useWindowSize();
     const fzf = new Fzf(content);
 
     function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -55,10 +58,11 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
             setSearchBar(false)
         }
     }
+
     return (
         <div className='fixed w-screen h-screen top-0 left-0 z-1800 z-[1800]'>
             <span className='flex justify-center h-full w-full relative'  >
-                <span className='w-1/2 h-fit rounded-xl z-[1900] mt-[5vw]' onClick={() => setSearchBar(true)}>
+                <span className='w-1/2 sm:w-full md:w-full lg:w-full h-fit rounded-xl z-[1900] mt-[5vw] sm:px-2 md:px-5 lg:px-5' onClick={() => setSearchBar(true)}>
                     <motion.div
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -74,7 +78,14 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
                             onKeyDown={handleKeyBoardInput}
                             autoFocus={true}
                         />
-                        <kbd className="kbd kbd-md m-5">Esc</kbd>
+                        <kbd className="kbd kbd-md m-5" onClick={() => setSearchBar(false)}>
+                            {
+                                windowSize.width > 1024 ?
+                                    <p className=''>Esc</p>
+                                    :
+                                    <CrossSVG cssClasses='' />
+                            }
+                        </kbd>
                     </motion.div>
                     {
                         filterResult.length != 0 &&

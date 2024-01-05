@@ -1,3 +1,4 @@
+import Footer from "../common/Footer";
 import SideBar from "../common/SideBar";
 import ThemeToggler from "../common/ThemeToggler";
 import HeroSection from "./HomePage/HeroSection";
@@ -14,6 +15,7 @@ const HomePage = () => {
             <NewsLetterSection />
             <div className="w-screen min-h-screen"></div>
             <ThemeToggler />
+            <Footer />
         </>
     )
 }

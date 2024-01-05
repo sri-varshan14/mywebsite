@@ -5,7 +5,7 @@ import ApiSVG from "@/components/svg/ApiSVG";
 
 const Skills = () => {
     return (
-        <div className="">
+        <div className="sm:w-full md:w-full lg:w-full">
             <p className="d3 font-poppins font-medium py-4">Skills</p>
             <div className="flex py-5 gap-8 flex-wrap">
                 <SkillsSlot title="Web Development." content="Proficient in crafting dynamic and responsive websites using React, my skill set encompasses the creation of engaging user interfaces and seamless user experiences. Leveraging React's versatility and efficiency, I design and develop websites that merge innovation with functionality. From conceptualization to execution, my expertise in React empowers me to build interactive and visually captivating online platforms.">

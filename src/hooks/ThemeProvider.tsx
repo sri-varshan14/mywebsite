@@ -3,17 +3,17 @@ import React from "react";
 import { createContext, ReactElement, useState } from "react";
 
 const ThemeContext = createContext({
-    theme: "rosepine-dawn",
+    theme: "white",
     toggleThemeHandler: () => { },
 });
 
 
 export function ThemeProvider({ children }: { children: React.ReactNode }): ReactElement {
-    const [theme, setTheme] = useState("rosepine-dawn");
+    const [theme, setTheme] = useState("dark");
 
     function toggleThemeHandler(): void {
-        if (theme == "rosepine") setTheme('rosepine-dawn')
-        else setTheme("rosepine")
+        if (theme == "white") setTheme('dark')
+        else setTheme("white")
     }
 
     return (

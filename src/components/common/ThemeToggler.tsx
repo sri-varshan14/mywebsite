@@ -7,7 +7,7 @@ const ThemeToggler = () => {
     const windowSize = useWindowSize();
     const theme = useContext(ThemeContext);
     return (
-        <div className="flex absolute top-5 right-5 gap-4">
+        <div className="flex absolute top-5 right-5 gap-4 z-[2500]">
             {
                 windowSize.width >= 1024 &&
                 <motion.div drag dragConstraints={{

@@ -17,6 +17,7 @@ const SideBar = () => {
     const [toggleSideBar, setToggleSideBar] = useState(false);
     const [searchBar, setSearchBar] = useState(false);
     let windowSize = useWindowSize();
+
     const cssClasses = "w-6 stroke-base-content relative mx-auto my-1 sm:my-0 md:my-0";
 
     function handleKeyPress(event: any) {
@@ -38,7 +39,7 @@ const SideBar = () => {
                 <div className="h-full flex flex-col items-center justify-between sm:justify-center md:justify-center lg:justify-center py-5 sm:py-0 md:py-0 lg:py-0 border-r-2 sm:border-t-2 md:border-t-2 lg:border-t-2 sm:border-r-0 md:border-r-0 lg:border-r-0 border-r-base-content border-t-base-content">
                     {windowSize.width >= 1024 &&
                         <Link href="/">
-                            <LogoSVG cssClasses="w-6 fill-base-content my-1 " />
+                            <LogoSVG cssClasses="w-6 fill-base-content my-1" />
                         </Link>
                     }
                     <div className="w-full flex flex-col sm:flex-row md:flex-row lg:flex-row items-center justify-center gap-4">

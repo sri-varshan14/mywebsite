@@ -67,7 +67,7 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
                         initial={{ opacity: 0, scale: 0.5 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.5 }}
-                        transition={{ ease: "easeOut", duration: 0.05 }}
+                        transition={{ ease: "easeOut", duration: 0.15, delay: 0.15 }}
                         className='w-full h-20 bg-base-100 rounded-xl border-2 border-base-content flex items-center overflow-hidden'>
                         <SearchSVG cssClasses='w-10 m-5' />
                         <input
@@ -89,13 +89,23 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
                     </motion.div>
                     {
                         filterResult.length != 0 &&
-                        <div className='w-full mt-5 bg-base-100 max-h-[30rem] flex flex-col rounded-xl border-2 border-base-content gap-5'>
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ ease: "easeOut", duration: 0.15 }}
+                            className='w-full mt-5 bg-base-100 max-h-[30rem] flex flex-col rounded-xl border-2 border-base-content gap-5'>
                             {
                                 filterResult.map((result) => {
                                     let link = "/blog/" + result.id;
                                     return (
                                         <Link href={link}>
-                                            <div className='flex h-26 items-center justify-evenly hover:bg-base-200 rounded-xl'>
+                                            <motion.div
+                                                initial={{ opacity: 0, y: -10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0 }}
+                                                transition={{ ease: "easeOut", duration: 0.15 }}
+                                                className='flex h-26 items-center justify-evenly hover:bg-base-200 rounded-xl'>
                                                 <BookSVG cssClasses='w-8 m-8' />
                                                 <div className='flex flex-col py-5' key={result.id}>
                                                     <h2 className='my-0 leading-none'>{result.title}</h2>
@@ -105,12 +115,12 @@ const Spotlight = ({ setSearchBar }: { setSearchBar: Dispatch<SetStateAction<boo
                                                     </div>
                                                 </div>
                                                 <ArrowUpRightSVG cssClasses='w-8 m-8 stroke-base-content' />
-                                            </div>
+                                            </motion.div>
                                         </Link>
                                     )
                                 })
                             }
-                        </div>
+                        </motion.div>
                     }
                 </span >
                 <div className='w-full h-screen absolute backdrop-blur-sm' onClick={() => setSearchBar(false)}></div>

@@ -12,18 +12,9 @@ const config: Config = {
         },
         extend: {
             fontFamily: {
-                'notosans': ['Noto Sans', 'sans-serif'],
-                'novasquare': ['Nova Square', 'sans-serif'],
                 'poppins': ['Poppins', 'sans-serif'],
-                'roboto': ['Roboto', 'sans-serif'],
-                'robotocon': ['Roboto Condensed', 'sans-serif'],
-                'preahvihear': ['Preahvihear', 'sans-serif'],
-                'bangers': ['Bangers', 'sans-serif'],
+                'inter': ['Inter', 'sans-serif'],
                 'audiowide': ['Audiowide', 'sans-serif'],
-                'raleway': ['Raleway', 'sans-serif'],
-                'worksans': ['Work Sans', 'sans-serif'],
-                'jetbrains': ['JetBrains Mono', 'sans-serif'],
-                'inter': ['Inter', 'sans-serif']
             },
             backgroundImage: {
                 'profile': "url('/image.png')",
@@ -42,38 +33,17 @@ const config: Config = {
     daisyui: {
         themes: [
             {
-                'rosepine': {
-                    "primary": "#c4a7e7",
-                    "secondary": "#ebbcba",
-                    "accent": "#f6c177",
-                    "neutral": "#191724",
-                    "base-100": "#1f1d2e",
-                    "info": "#31748f",
-                    "success": "#9ccfd8",
-                    "warning": "#f6c177",
-                    "error": "#eb6f92",
+                'white': {
+                    "base-100": "#ffffff",
+                    "base-200": "#dcdcdc",
+                    "base-300": "#c8c8c8",
+                    "base-content": "#000000",
                 },
-                'rosepine-moon': {
-                    "primary": "#c4a7e7",
-                    "secondary": "#ea9a97",
-                    "accent": "#c4a7e7",
-                    "neutral": "#2a273f",
-                    "base-100": "#232136",
-                    "info": "#3e8fb0",
-                    "success": "#9ccfd8",
-                    "warning": "#f6c177",
-                    "error": "#eb6f92",
-                },
-                'rosepine-dawn': {
-                    "primary": "#907aa9",
-                    "secondary": "#d7827e",
-                    "accent": "#907aa9",
-                    "neutral": "#faf4ed",
-                    "base-100": "#fffaf3",
-                    "info": "#286983",
-                    "success": "#56949f",
-                    "warning": "#ea9d34",
-                    "error": "#b4637a",
+                'dark': {
+                    "base-100": "#000000",
+                    "base-200": "#111111",
+                    "base-300": "#222222",
+                    "base-content": "#ffffff",
                 },
             },
         ],

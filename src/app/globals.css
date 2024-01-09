@@ -158,6 +158,6 @@ p {
     @apply mx-auto pb-5;
 }
 
-*{
-    @apply scroll-smooth;
+* {
+    @apply scroll-smooth transition-colors duration-500;
 }

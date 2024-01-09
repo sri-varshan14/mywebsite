@@ -55,7 +55,7 @@ const SideBar = () => {
                             </span>
                         </SideBarIconSlot>
                         <SideBarIconSlot >
-                            <Link className="flex flex-col items-center" href="/works">
+                            <Link className="flex flex-col items-center" href="/#works">
                                 <BriefcaseSVG cssClasses={cssClasses} />
                                 <p className="text-xs">Works</p>
                             </Link>
@@ -64,12 +64,6 @@ const SideBar = () => {
                             <Link className="flex flex-col items-center" href="/blog">
                                 <MessageSquareSVG cssClasses={cssClasses} />
                                 <p className="text-xs">Blogs</p>
-                            </Link>
-                        </SideBarIconSlot>
-                        <SideBarIconSlot>
-                            <Link className="flex flex-col items-center" href="/connect">
-                                <ArrowUpRightSVG cssClasses={cssClasses} />
-                                <p className="text-xs">Connect</p>
                             </Link>
                         </SideBarIconSlot>
                     </div>

@@ -1,5 +1,5 @@
 import { serverClient } from "@/app/_trpc/serverClient";
-import getBaseUrl from "@/app/utils/getBaseUrl";
+import getBaseUrl from "@/utils/getBaseUrl";
 import DynamicBlog from "@/components/route/DynamicBlog";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {

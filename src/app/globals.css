@@ -158,3 +158,6 @@ p {
     @apply mx-auto pb-5;
 }
 
+*{
+    @apply scroll-smooth;
+}

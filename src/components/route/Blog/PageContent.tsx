@@ -1,7 +1,7 @@
 import remarkGfm from 'remark-gfm'
 import Markdown from 'react-markdown'
-import { convertTimeStampToDate } from '@/app/utils/dateToString'
-import { BlogListSlotType } from '@/app/types/BlogListSlotType'
+import { convertTimeStampToDate } from '@/utils/dateToString'
+import { BlogListSlotType } from '@/types/BlogListSlotType'
 
 const PageContent = ({ blog_content, blog_detail }: { blog_content: string, blog_detail: BlogListSlotType }) => {
     const date = convertTimeStampToDate(blog_detail.date)

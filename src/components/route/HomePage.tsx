@@ -4,17 +4,17 @@ import ThemeToggler from "../common/ThemeToggler";
 import HeroSection from "./HomePage/HeroSection";
 import MotionTextAni from "./HomePage/MotionTextAni";
 import NewsLetterSection from "./HomePage/NewsLetterSection";
+import WorkSection from "./HomePage/WorkSection";
 
 const HomePage = () => {
     return (
         <>
             <SideBar />
+            <ThemeToggler />
             <HeroSection />
             <MotionTextAni />
-            <div className="w-screen min-h-screen"></div>
+            <WorkSection />
             <NewsLetterSection />
-            <div className="w-screen min-h-screen"></div>
-            <ThemeToggler />
             <Footer />
         </>
     )

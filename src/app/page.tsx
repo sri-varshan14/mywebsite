@@ -1,5 +1,4 @@
 import HomePage from "@/components/route/HomePage";
-import { useWindowSize } from "@/hooks/WindowSize";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

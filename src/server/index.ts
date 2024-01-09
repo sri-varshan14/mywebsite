@@ -1,7 +1,7 @@
 import db from "@/db/client";
 import { z } from 'zod';
 import { publicProcedure, router } from "./trpc";
-import { blog } from "@/db/scheme";
+import { blog, newsletter } from "@/db/scheme";
 import axios from 'axios';
 import { eq } from "drizzle-orm";
 
@@ -37,6 +37,36 @@ export const appRouter = router({
                 tags: blog.category
             }).from(blog);
             return result;
+        }),
+    subNewsLetter: publicProcedure
+        .input(z.string())
+        .query(async (opts) => {
+            const { input } = opts;
+            let result = await db.select({
+                receive: newsletter.receive
+            }).from(newsletter).where(eq(newsletter.email, input))
+            if (result.length == 0) {
+                await db.insert(newsletter).values({
+                    email: input
+                });
+                return {
+                    error: false,
+                    msg: "Thanks for the subscribe."
+                }
+            }
+            else if (result.length == 1 && result[0].receive == false) {
+                await db.update(newsletter).set({ receive: true }).where(eq(newsletter.email, input))
+                return {
+                    error: false,
+                    msg: "Thanks for the resubscribe."
+                }
+            }
+            else {
+                return {
+                    error: true,
+                    msg: "User already exist."
+                }
+            }
         })
 })
 

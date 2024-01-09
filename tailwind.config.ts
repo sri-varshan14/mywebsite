@@ -27,7 +27,8 @@ const config: Config = {
             },
             backgroundImage: {
                 'profile': "url('/image.png')",
-                'transparent': "url('/transparent.png')"
+                'transparent': "url('/transparent.png')",
+                'art1': "url('/art.jpg')"
             }
         },
         screens: {

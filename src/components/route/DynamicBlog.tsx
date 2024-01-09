@@ -1,5 +1,5 @@
 "use client"
-import { BlogListSlotType } from '@/app/types/BlogListSlotType'
+import { BlogListSlotType } from '@/types/BlogListSlotType'
 import Footer from '../common/Footer'
 import SideBar from '../common/SideBar'
 import ThemeToggler from '../common/ThemeToggler'

@@ -1,5 +1,5 @@
-import { BlogListSlotType } from "@/app/types/BlogListSlotType"
-import { convertTimeStampToDate } from "@/app/utils/dateToString";
+import { BlogListSlotType } from "@/types/BlogListSlotType"
+import { convertTimeStampToDate } from "@/utils/dateToString";
 
 import * as dotenv from "dotenv";
 import Link from "next/link";

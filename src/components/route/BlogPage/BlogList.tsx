@@ -1,6 +1,6 @@
 import { trpc } from "@/app/_trpc/client";
 import BlogListSlot from "./BlogListSlot";
-import { BlogListSlotType } from "@/app/types/BlogListSlotType";
+import { BlogListSlotType } from "@/types/BlogListSlotType";
 import { serverClient } from "@/app/_trpc/serverClient";
 
 const BlogList = ({ blog_list }: { blog_list: Awaited<ReturnType<(typeof serverClient)["getAllBlogList"]>> }) => {

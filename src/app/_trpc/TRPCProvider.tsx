@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { trpc } from "./client";
 import { httpBatchLink } from "@trpc/react-query";
-import getBaseUrl from "../utils/getBaseUrl";
+import getBaseUrl from "@/utils/getBaseUrl";
 
 
 export default function TRPCProvider({ children }: { children: React.ReactNode }) {

@@ -12,7 +12,7 @@ const SocialLinks = () => {
                 <SocialLinkItemSlot href="https://www.instagram.com/_sri_varshan_geetha/" value="@_sri_varshan_geetha">
                     <InstagramSVG cssClasses="w-6 fill-base-100 " />
                 </SocialLinkItemSlot>
-                <SocialLinkItemSlot href="mailto:mailmearsri14@gmail.com" value="mailmeatsri14@gmail.com">
+                <SocialLinkItemSlot href="mailto:me@srivarshan.dev" value="me@srivarshan.dev">
                     <MailSVG cssClasses="w-6 fill-base-100 " />
                 </SocialLinkItemSlot>
                 <SocialLinkItemSlot href="https://www.linkedin.com/in/sri-varshan-aa853a233/" value="@Sri Varshan">

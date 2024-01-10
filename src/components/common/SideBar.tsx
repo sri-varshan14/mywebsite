@@ -21,7 +21,8 @@ const SideBar = () => {
     const cssClasses = "w-6 stroke-base-content relative mx-auto my-1 sm:my-0 md:my-0";
 
     function handleKeyPress(event: any) {
-        if (event.ctrlKey && event.key == 'e') {
+        console.log(event.key)
+        if (event.ctrlKey && event.key == " ") {
             setSearchBar(true)
         }
     }

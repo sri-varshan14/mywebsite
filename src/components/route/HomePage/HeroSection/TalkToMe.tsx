@@ -8,7 +8,7 @@ const TalkToMe = () => {
             <Link href="/#connect">
                 <div className="max-w-2xl flex items-center">
                     <ArrowUpRightSVG cssClasses="w-7 p-1 bg-base-content stroke-base-100 rounded-tr-xl" />
-                    <p className="px-3 font-poppins underline underline-offset-8">Want to Talk to Me?</p>
+                    <p className="px-3 font-inter underline underline-offset-8 hover:tracking-tighter transition-all duration-200">Want to Talk to Me?</p>
                 </div>
             </Link>
         </>

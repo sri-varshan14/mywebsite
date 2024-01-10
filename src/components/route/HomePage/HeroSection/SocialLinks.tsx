@@ -5,7 +5,7 @@ import TwitterSVG from "@/components/svg/TwitterSVG";
 import SocialLinkItemSlot from "./SocialLinkItemSlot";
 
 const SocialLinks = () => {
-    const cssClasses = "w-6 fill-base-300"
+    const cssClasses = "w-6"
     const links = [
         { logo: InstagramSVG, href: "https://www.instagram.com/_sri_varshan_geetha/", value: "@_sri_varshan_geetha" },
         { logo: MailSVG, href: "mailto:me@srivarshan.dev", value: "me@srivarshan.dev" },

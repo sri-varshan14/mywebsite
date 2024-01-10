@@ -33,10 +33,10 @@ const AboutArea = () => {
                         }
                         <p className=' font-normal font-poppins break-words w-4/5 sm:w-full md:w-full lg:w-full text-right sm:text-center md:text-center lg:text-center'>Computer Science Student based in Chennai, India</p>
                         <Link className='underline ' href="https://github.com/sri-varshan14" target='_blank'>
-                            <span className='flex pt-3 sm:pt-0 md:pt-0'>
+                            <span className='flex pt-3 sm:pt-0 md:pt-0 link_ani'>
                                 <GithubSVG cssClasses='w-5 fill-base-content mx-3' />
                                 <p className='underline'>sri-varshan14</p>
-                                <ArrowUpRightSVG cssClasses='w-4' />
+                                <ArrowUpRightSVG cssClasses='w-4 stroke-base-content link' />
                             </span>
                         </Link>
                     </div>

@@ -15,7 +15,7 @@ const ThemeToggler = () => {
                     left: 0,
                     right: 0,
                     bottom: 0,
-                }} className="bg-base-100 border-[1px] border-base-content px-4 flex items-center gap-1 rounded-full">Press <kbd className="kbd kbd-sm">⌘</kbd> + <kbd className="kbd kbd-sm">E</kbd> to Search</motion.div>
+                }} className="bg-base-100 border-[1px] border-base-content px-4 flex items-center gap-1 rounded-full">Press <kbd className="kbd kbd-sm">⌘</kbd> + <kbd className="kbd kbd-sm">Space</kbd> to Search</motion.div>
             }
             <motion.label drag dragConstraints={{
                 top: 0,

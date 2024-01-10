@@ -14,7 +14,7 @@ const BlogListSlot = ({ blog }: { blog: BlogListSlotType }) => {
             <div className="max-w-3xl sm:w-full flex sm:flex-col-reverse md:flex-col-reverse lg:flex-col-reverse">
                 <div className="flex flex-col">
                     <Link href={blog_route}>
-                        <h3 className="font-bold font-raleway max-w-xl">{blog.title}</h3>
+                        <h3 className="font-bold font-poppins max-w-xl">{blog.title}</h3>
                         <p className="font-inter font-light max-w-lg">{blog.description}</p>
                     </Link>
                     <div className="flex font-light">

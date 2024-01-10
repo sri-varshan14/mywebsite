@@ -8,7 +8,7 @@ const PageContent = ({ blog_content, blog_detail }: { blog_content: string, blog
     return (
         <section className='pl-14 min-h-screen'>
             <article className='m-auto max-w-3xl sm:w-screen md:w-screen py-[15vh]'>
-                <h1 className='d3 font-raleway py-8'>{blog_detail?.title}</h1>
+                <h1 className='d3 font-poppins py-8'>{blog_detail?.title}</h1>
                 <div className='flex flex-wrap'>
                     {
                         blog_detail?.category.split('-').map((tag) => {

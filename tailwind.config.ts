@@ -34,12 +34,14 @@ const config: Config = {
         themes: [
             {
                 'white': {
+                    "primary": "#265cfc",
                     "base-100": "#ffffff",
                     "base-200": "#dcdcdc",
                     "base-300": "#c8c8c8",
                     "base-content": "#000000",
                 },
                 'dark': {
+                    "primary": "#B895E2",
                     "base-100": "#000000",
                     "base-200": "#111111",
                     "base-300": "#222222",

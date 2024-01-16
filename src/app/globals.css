@@ -154,8 +154,11 @@ p {
 .blog h1,h2,h3,h4,h5 {
     @apply font-poppins my-2;
 }
+.blog a {
+    @apply body font-normal font-inter tracking-tighter py-4 text-primary hover:underline ;
+}
 .blog p {
-    @apply lead font-normal font-inter tracking-tighter py-4;
+    @apply body font-normal font-inter tracking-tighter py-4;
 }
 
 .blog img {
@@ -166,6 +169,11 @@ p {
     @apply scroll-smooth transition-colors duration-500;
 }
 
+.blog_toc a {
+    @apply text-primary opacity-70 hover:opacity-100 relative hover:underline before:content-['➤'] before:absolute before:left-[-1.5rem] ;
+}
+
 .link_ani:hover .link {
     @apply translate-x-1 translate-y-[-0.25rem] duration-200 transition-transform;
 }
+

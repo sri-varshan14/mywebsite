@@ -12,9 +12,9 @@ const config: Config = {
         },
         extend: {
             fontFamily: {
-                'poppins': ['Poppins', 'sans-serif'],
-                'inter': ['Inter', 'sans-serif'],
-                'audiowide': ['Audiowide', 'sans-serif'],
+                'poppins': ['var(--font-poppins)'],
+                'inter': ['var(--font-inter)'],
+                'audiowide': ['var(--font-audiowide)'],
             },
             backgroundImage: {
                 'profile': "url('/image.png')",

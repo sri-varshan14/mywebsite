@@ -2,23 +2,23 @@ import { serverClient } from "@/app/_trpc/serverClient";
 import getBaseUrl from "@/utils/getBaseUrl";
 import DynamicBlog from "@/components/route/DynamicBlog";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-    const blog_detail = await serverClient.getBlogDetail(params.id);
+export async function generateMetadata({ params }: { params: { rvalue: string } }) {
+    const blog_detail = await serverClient.getBlogDetail(params.rvalue);
     return {
         title: blog_detail.title,
         description: blog_detail.description,
         openGraph: {
             title: blog_detail.title,
             description: blog_detail.description,
-            url: getBaseUrl() + "/blog" + params.id,
+            url: getBaseUrl() + "/blog" + params.rvalue,
             images: [blog_detail.thumbnail]
         }
     }
 }
 
-const DynamicBlogPost = async ({ params }: { params: { id: string } }) => {
-    const blog_content = await serverClient.getBlogContent(params.id);
-    const blog_detail = await serverClient.getBlogDetail(params.id)
+const DynamicBlogPost = async ({ params }: { params: { rvalue: string } }) => {
+    const blog_content = await serverClient.getBlogContent(params.rvalue);
+    const blog_detail = await serverClient.getBlogDetail(params.rvalue)
     return (
         <>
             <main className="w-screen min-h-screen bg-base-100 relative">

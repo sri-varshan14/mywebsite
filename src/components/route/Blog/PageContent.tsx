@@ -5,7 +5,7 @@ import remarkToc from 'remark-toc'
 
 const PageContent = ({ blog_content }: { blog_content: string }) => {
     return (
-        <article className='max-w-2xl sm:w-screen md:w-screen'>
+        <article className=''>
             <Markdown
                 className="blog"
                 components={{

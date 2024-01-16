@@ -1,4 +1,3 @@
-import { trpc } from "@/app/_trpc/client";
 import BlogListSlot from "./BlogListSlot";
 import { BlogListSlotType } from "@/types/BlogListSlotType";
 import { serverClient } from "@/app/_trpc/serverClient";

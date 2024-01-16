@@ -5,6 +5,7 @@ export interface BlogListSlotType {
     date: string,
     readtime: string,
     thumbnail: string,
-    category: string
+    category: string,
+    rvalue: string
 }
 

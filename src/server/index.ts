@@ -15,7 +15,7 @@ export const appRouter = router({
         .input(z.string())
         .query(async (opts) => {
             const { input } = opts;
-            let result = await db.select({ markdown: blog.markdown }).from(blog).where(eq(blog.id, input))
+            let result = await db.select({ markdown: blog.markdown }).from(blog).where(eq(blog.rvalue, input))
             let mk_link = result[0].markdown;
             let response = await axios.get(mk_link);
             const content = response.data;
@@ -25,7 +25,7 @@ export const appRouter = router({
         .input(z.string())
         .query(async (opts) => {
             const { input } = opts;
-            let result = await db.select().from(blog).where(eq(blog.id, input))
+            let result = await db.select().from(blog).where(eq(blog.rvalue, input))
             return result[0]
         }),
     getSearchDetails: publicProcedure

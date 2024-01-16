@@ -3,6 +3,7 @@ import { pgTable, text, uuid, date, boolean } from "drizzle-orm/pg-core";
 
 export const blog = pgTable('blogs', {
     id: uuid('id').primaryKey().default(sql`gen_random_uuid()`),
+    rvalue: text('rvalue').default("").notNull().unique(),
     title: text('title').default("").notNull(),
     description: text('description').default("").notNull(),
     readtime: text('readtime').default("5").notNull(),

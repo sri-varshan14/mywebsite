@@ -1,6 +1,6 @@
 {
-  "id": "db264db7-f82a-4e00-bbb7-282d180a8f2c",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "d6ba1327-ca24-4aa4-94ae-206e37266c4a",
+  "prevId": "857501f9-7140-487f-b9ea-e83380cc263e",
   "version": "5",
   "dialect": "pg",
   "tables": {
@@ -15,8 +15,8 @@
           "notNull": true,
           "default": "gen_random_uuid()"
         },
-        "rvalue": {
-          "name": "rvalue",
+        "route": {
+          "name": "route",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
@@ -57,6 +57,13 @@
           "notNull": true,
           "default": "''"
         },
+        "thumbnail": {
+          "name": "thumbnail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        },
         "date": {
           "name": "date",
           "type": "date",
@@ -69,11 +76,11 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "blogs_rvalue_unique": {
-          "name": "blogs_rvalue_unique",
+        "blogs_route_unique": {
+          "name": "blogs_route_unique",
           "nullsNotDistinct": false,
           "columns": [
-            "rvalue"
+            "route"
           ]
         }
       }

@@ -12,17 +12,17 @@
         "format": "prettier --write .",
         "db:generate": "drizzle-kit generate:pg",
         "db:push": "drizzle-kit push:pg",
-        "db:migrate": "node -r esbuild-register ./src/db/migrate.ts"
+        "db:migrate": "node -r esbuild-register ./src/db/lib/migrate.ts"
     },
     "devDependencies": {
         "@catppuccin/tailwindcss": "^0.1.6",
         "@sveltejs/adapter-auto": "^3.0.0",
         "@sveltejs/kit": "^2.0.0",
         "@sveltejs/vite-plugin-svelte": "^3.0.0",
-        "@types/pg": "^8.10.9",
         "autoprefixer": "^10.4.17",
         "dotenv": "^16.3.1",
         "drizzle-kit": "^0.20.13",
+        "esbuild-register": "^3.5.0",
         "postcss": "^8.4.33",
         "prettier": "^3.1.1",
         "prettier-plugin-svelte": "^3.1.2",
@@ -35,6 +35,7 @@
     "type": "module",
     "dependencies": {
         "drizzle-orm": "^0.29.3",
-        "pg": "^8.11.3"
+        "postgres": "^3.4.3",
+        "svelte-markdown": "^0.4.1"
     }
 }

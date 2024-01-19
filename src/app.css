@@ -30,7 +30,7 @@ p, a, li {
     @apply font-noto font-medium;
 }
 
-main a {
+.content_area a {
     @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[1ch] transition-colors duration-500 select-text;
 }
 
@@ -38,8 +38,12 @@ main a {
     @apply w-6 h-6 fill-ctp-text hover:opacity-50
 }
 
+.arrow{
+    @apply w-4 h-4 fill-ctp-text;
+}
+
 * {
-    @apply m-0 p-0 box-border selection:bg-ctp-surface2 selection:text-ctp-text
+    @apply m-0 p-0 box-border selection:bg-ctp-surface2 selection:text-ctp-text transition-all duration-500;
 }
 
 a {

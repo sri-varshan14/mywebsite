@@ -6,6 +6,8 @@
 		{ name: 'Writing', link: '/writing' },
 		{ name: 'Misc', link: '/misc' }
 	];
+
+	$: selectroute = '/' + $page.route.id?.split('/')[1];
 </script>
 
 <div class="w-40 sticky top-[5rem] max-h-60">
@@ -22,7 +24,7 @@
 		{#each nav_links as { name, link }}
 			<a href={link} class="flex relative">
 				<svg
-					class="w-5 absolute left-[-2ch] {$page.route.id == link
+					class="w-5 absolute left-[-2ch] {selectroute == link
 						? 'fill-ctp-green opacity-100'
 						: 'fill-transparent'} "
 					viewBox="0 0 24 24"
@@ -39,7 +41,7 @@
 					</g></svg
 				>
 				<li
-					class="{$page.route.id == link
+					class="{selectroute == link
 						? 'text-ctp-green'
 						: 'text-ctp-surface2 hover:text-ctp-subtext0'} "
 				>

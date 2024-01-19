@@ -1,3 +1,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+
+    /* Encode Sans Condensed */
+	@font-face {
+		font-family: 'Encode Sans Condensed';
+        src: local('Encode Sans Condensed bold'), local('EncodeSansCondensed-Bold'), url('/fonts/Encode_Sans_Condensed/EncodeSansCondensed-Bold.ttf');
+        font-weight: bold;
+        font-display: swap;
+	}
+	@font-face {
+		font-family: 'Encode Sans Condensed';
+        src: local('Encode Sans Condensed Semibold'), local('EncodeSansCondensed-SemiBold'), url('/fonts/Encode_Sans_Condensed/EncodeSansCondensed-SemiBold.ttf');
+        font-weight: semibold;
+        font-display: swap;
+	}
+
+    /* Inter */
+    @font-face {
+        font-family: 'Inter';
+        src: local('Inter Bold'), local('Inter-Bold'), url('/fonts/Inter/static/Inter-Medium.ttf');
+        font-weight: medium;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Inter';
+        src: local('Inter Regular'), local('Inter-Regular'), url('/fonts/Inter/static/Inter-Regular.ttf');
+        font-weight: regular;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Inter';
+        src: local('Inter Light'), local('Inter-Light'), url('/fonts/Inter/static/Inter-Light.ttf');
+        font-weight: light;
+        font-display: swap;
+    }
+
+    /* Noto Sans */
+    @font-face {
+        font-family: 'Noto Sans';
+        src: local('Noto Sans Bold'), local('NotoSans-Bold'), url('/fonts/Noto_Sans/static/NotoSans-Bold.ttf');
+        font-weight: bold;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Noto Sans';
+        src: local('Noto Sans Black'), local('NotoSans-Black'), url('/fonts/Noto_Sans/static/NotoSans-Medium.ttf');
+        font-weight: medium;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Noto Sans';
+        src: local('Noto Sans Black'), local('NotoSans-Black'), url('/fonts/Noto_Sans/static/NotoSans-Regular.ttf');
+        font-weight: regular;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: 'Noto Sans';
+        src: local('Noto Sans Black'), local('NotoSans-Black'), url('/fonts/Noto_Sans/static/NotoSans-Light.ttf');
+        font-weight: light;
+        font-display: swap;
+    }
+
+    /* Syne */
+    @font-face {
+        font-family: 'Syne';
+        src: url('/fonts/Syne/Syne-VariableFont_wght.ttf');
+        font-weight: 100 900; /* Range of font weights available in the variable font */
+        font-stretch: 1% 100%; /* Range of font stretches available in the variable font */
+        font-style: normal; /* or italic if the font supports it */
+        font-display: swap;
+    }
+}
+
+li{
+    @apply list-none;
+}
+
+h1, h2, h3, h4 {
+    @apply font-syne;
+}
+
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-xl
+}
+
+h4 {
+    @apply text-lg
+}
+
+p, a, li {
+    @apply font-noto font-medium;
+}
+
+main a {
+    @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[1ch] transition-colors duration-500 select-text;
+}
+
+.social_link{
+    @apply w-6 h-6 fill-ctp-text hover:opacity-50
+}
+
+* {
+    @apply m-0 p-0 box-border selection:bg-ctp-surface2 selection:text-ctp-text
+}
+
+a {
+    @apply select-none
+}
+

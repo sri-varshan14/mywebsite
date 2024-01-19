@@ -2,8 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+li{
+    @apply list-none;
+}
 
+h1, h2, h3, h4 {
+    @apply font-syne;
+}
+
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-xl
+}
+
+h4 {
+    @apply text-lg
+}
+
+p, a, li {
+    @apply font-noto font-medium;
+}
+
+main a {
+    @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[1ch] transition-colors duration-500 select-text;
+}
+
+.social_link{
+    @apply w-6 h-6 fill-ctp-text hover:opacity-50
+}
+
+* {
+    @apply m-0 p-0 box-border selection:bg-ctp-surface2 selection:text-ctp-text
+}
+
+a {
+    @apply select-none
+}
+
+@layer base {
     /* Encode Sans Condensed */
 	@font-face {
 		font-family: 'Encode Sans Condensed';
@@ -73,49 +116,5 @@
         font-style: normal; /* or italic if the font supports it */
         font-display: swap;
     }
-}
-
-li{
-    @apply list-none;
-}
-
-h1, h2, h3, h4 {
-    @apply font-syne;
-}
-
-h1 {
-    @apply text-3xl;
-}
-
-h2 {
-    @apply text-2xl;
-}
-
-h3 {
-    @apply text-xl
-}
-
-h4 {
-    @apply text-lg
-}
-
-p, a, li {
-    @apply font-noto font-medium;
-}
-
-main a {
-    @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[1ch] transition-colors duration-500 select-text;
-}
-
-.social_link{
-    @apply w-6 h-6 fill-ctp-text hover:opacity-50
-}
-
-* {
-    @apply m-0 p-0 box-border selection:bg-ctp-surface2 selection:text-ctp-text
-}
-
-a {
-    @apply select-none
 }
 

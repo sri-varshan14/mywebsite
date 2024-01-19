@@ -5,7 +5,7 @@
 	<title>Home | Srivarshan</title>
 </svelte:head>
 
-<main class="flex flex-col gap-3 py-20">
+<main class="flex flex-col gap-3 py-20 content_area">
 	<p>I'm a developer living in IN. I am at my final year's of my bachelor degree.</p>
 	<p>
 		My academic pursuits are centered around mastering the intricacies of software development.

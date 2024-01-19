@@ -30,6 +30,18 @@ p, a, li {
     @apply font-noto font-medium;
 }
 
+.content_area h1 {
+    @apply font-bold mb-10; 
+}
+
+.content_area h2 {
+    @apply mb-1; 
+}
+
+.content_area h1,.content_area h2,.content_area h3,.content_area h4,.content_area h5 {
+    @apply text-ctp-green;
+}
+
 .content_area a {
     @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[1ch] transition-colors duration-500 select-text;
 }
@@ -43,7 +55,7 @@ p, a, li {
 }
 
 * {
-    @apply m-0 p-0 box-border selection:bg-ctp-surface2 selection:text-ctp-text transition-all duration-500;
+    @apply m-0 p-0 box-border selection:bg-ctp-surface2 selection:text-ctp-text transition-all duration-500 scroll-smooth;
 }
 
 a {

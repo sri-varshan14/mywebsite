@@ -10,8 +10,8 @@
 	$: selectroute = '/' + $page.route.id?.split('/')[1];
 </script>
 
-<div class="w-40 sticky top-[5rem] max-h-60">
-	<div class="pb-20">
+<div class="w-40 sm:w-full md:w-full sticky sm:static md:static top-[5rem] max-h-60">
+	<div class="pb-20 sm:pb-4 md:pb-4">
 		<a href="/">
 			<Logo
 				cssClasses="w-10 border-2 border-ctp-green rounded-full p-1"
@@ -20,13 +20,13 @@
 			/>
 		</a>
 	</div>
-	<nav class="">
+	<nav class="flex flex-col sm:flex-row md:flex-row gap-4">
 		{#each nav_links as { name, link }}
 			<a href={link} class="flex relative">
 				<svg
 					class="w-5 absolute left-[-2ch] {selectroute == link
 						? 'fill-ctp-green opacity-100'
-						: 'fill-transparent'} "
+						: 'fill-transparent'} sm:opacity-0 md:opacity-0"
 					viewBox="0 0 24 24"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"

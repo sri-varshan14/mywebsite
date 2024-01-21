@@ -6,6 +6,6 @@
 	export let data: PageServerData;
 </script>
 
-<main class="flex flex-col gap-3 py-20 content_area">
+<main class="flex flex-col gap-3 py-20 sm:py-5 content_area">
 	<SvelteMarkdown source={data.content} />
 </main>

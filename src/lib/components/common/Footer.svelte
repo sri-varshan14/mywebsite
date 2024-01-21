@@ -9,9 +9,9 @@
 
 <footer class="w-full flex items-center justify-between">
 	<p class="text-sm">&copy; 2024 Srivarshan Geetha</p>
-	<div class="flex items-center gap-1">
+	<div class="flex items-center gap-1 sm:gap-0">
 		<LogoLinkSlot link="/rss.xml">
-			<Rss cssClasses="w-4 aspect-square fill-ctp-text hover:opacity-50 " />
+			<Rss cssClasses="w-4 aspect-square fill-ctp-text hover:opacity-50" />
 		</LogoLinkSlot>
 		<LogoLinkSlot link="https://github.com/sri-varshan14">
 			<Github cssClasses="social_link" />

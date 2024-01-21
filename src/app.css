@@ -31,7 +31,7 @@ p, a, li {
 }
 
 .content_area h1 {
-    @apply font-bold mb-10; 
+    @apply font-bold mb-10 sm:mb-4 md:mb-7; 
 }
 
 .content_area h2 {
@@ -46,12 +46,16 @@ p, a, li {
     @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[1ch] transition-colors duration-500 select-text;
 }
 
+.content_area p {
+    @apply text-justify;
+}
+
 .social_link{
     @apply w-6 aspect-square fill-ctp-text hover:opacity-50
 }
 
 .arrow{
-    @apply w-3 aspect-square fill-ctp-text;
+    @apply w-3 sm:w-2 aspect-square fill-ctp-text;
 }
 
 * {

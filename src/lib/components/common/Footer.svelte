@@ -2,13 +2,17 @@
 	import LogoLinkSlot from '../assets/slots/LogoLinkSlot.svelte';
 	import Github from '../assets/svg/Github.svelte';
 	import LinkedIn from '../assets/svg/LinkedIn.svelte';
+	import Rss from '../assets/svg/RSS.svelte';
 	import TwitterX from '../assets/svg/TwitterX.svelte';
 	import Youtube from '../assets/svg/Youtube.svelte';
 </script>
 
 <footer class="w-full flex items-center justify-between">
 	<p class="text-sm">&copy; 2024 Srivarshan Geetha</p>
-	<div class="flex">
+	<div class="flex items-center gap-1">
+		<LogoLinkSlot link="/rss.xml">
+			<Rss cssClasses="w-4 aspect-square fill-ctp-text hover:opacity-50 " />
+		</LogoLinkSlot>
 		<LogoLinkSlot link="https://github.com/sri-varshan14">
 			<Github cssClasses="social_link" />
 		</LogoLinkSlot>

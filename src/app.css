@@ -47,11 +47,11 @@ p, a, li {
 }
 
 .social_link{
-    @apply w-6 h-6 fill-ctp-text hover:opacity-50
+    @apply w-6 aspect-square fill-ctp-text hover:opacity-50
 }
 
 .arrow{
-    @apply w-4 h-4 fill-ctp-text;
+    @apply w-3 aspect-square fill-ctp-text;
 }
 
 * {

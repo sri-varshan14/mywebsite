@@ -1,14 +1,8 @@
 import type { PageServerLoad } from './$types';
-import db from '$lib/db';
-import { blog } from '$lib/db/scheme';
-import { eq } from 'drizzle-orm';
+import { getBlogContent } from '$lib/db';
 
 export const load: PageServerLoad = async ({ params }) => {
-    let blog_detail = await db.select({
-        title: blog.title,
-        date: blog.date,
-        markdown: blog.markdown,
-    }).from(blog).where(eq(blog.route, params.route));
+    let blog_detail = await getBlogContent(params.route);
 
     let content = await fetch(blog_detail[0].markdown).then(res => res.text());
     return {

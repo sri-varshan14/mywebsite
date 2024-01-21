@@ -3,7 +3,6 @@
 	import RightArrow from '../svg/RightArrow.svelte';
 
 	export let blog: Blog;
-
 	let on_hover = false;
 
 	function mouse_enter() {

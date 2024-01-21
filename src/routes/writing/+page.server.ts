@@ -1,9 +1,8 @@
 import type { PageServerLoad } from './$types';
-import db from '$lib/db';
-import { blog } from '$lib/db/scheme';
+import { getAllBlogDetail } from '$lib/db';
 
 export const load: PageServerLoad = async ({ params }) => {
     return {
-        post: await db.select().from(blog)
+        post: await getAllBlogDetail()
     }
 }

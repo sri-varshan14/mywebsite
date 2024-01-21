@@ -43,11 +43,39 @@ p, a, li {
 }
 
 .content_area a {
-    @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[1ch] transition-colors duration-500 select-text;
+    @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[0.5ch] transition-colors duration-500 select-text rounded-sm;
 }
 
 .content_area p {
     @apply text-justify;
+}
+
+.writing_content h1 {
+    @apply font-bold mb-10 sm:mb-4 md:mb-7 text-ctp-lavender;
+}
+
+.writing_content h2 {
+    @apply font-semibold mb-1 text-ctp-teal;
+}
+
+.writing_content h3 {
+    @apply font-medium mb-0.5 text-ctp-peach
+}
+
+.writing_content a {
+    @apply text-ctp-green underline underline-offset-4 hover:text-ctp-base hover:no-underline hover:bg-ctp-green px-[0.5ch] transition-colors duration-500 select-text rounded-sm;
+}
+
+.writing_content em {
+    @apply font-thin text-ctp-sapphire
+}
+
+.writing_content pre {
+    @apply bg-ctp-base p-5 
+}
+
+.writing_content code {
+    @apply whitespace-pre-wrap font-jetbrains
 }
 
 .social_link{
@@ -131,6 +159,16 @@ a {
     @font-face {
         font-family: 'Syne';
         src: url('/fonts/Syne/Syne-VariableFont_wght.ttf');
+        font-weight: 100 900; /* Range of font weights available in the variable font */
+        font-stretch: 1% 100%; /* Range of font stretches available in the variable font */
+        font-style: normal; /* or italic if the font supports it */
+        font-display: swap;
+    }
+
+    /* JetBrains Mono */
+    @font-face {
+        font-family: 'JetBrains Mono';
+        src: url('/fonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf');
         font-weight: 100 900; /* Range of font weights available in the variable font */
         font-stretch: 1% 100%; /* Range of font stretches available in the variable font */
         font-style: normal; /* or italic if the font supports it */

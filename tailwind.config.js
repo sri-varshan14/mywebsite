@@ -6,7 +6,8 @@ export default {
             'inter': ['Inter'],
             'noto': ['Noto Sans'],
             'encode-sans': ['Encode Sans Condensed'],
-            'syne': ['Syne']
+            'syne': ['Syne'],
+            'jetbrains': ['JetBrains Mono']
         },
         screens: {
             'sm': { 'min': '300px', 'max': '767px' },

@@ -20,7 +20,7 @@
 			/>
 		</a>
 	</div>
-	<nav class="flex flex-col sm:flex-row md:flex-row gap-4">
+	<nav class="flex flex-col sm:flex-row md:flex-row sm:gap-4 md:gap-4">
 		{#each nav_links as { name, link }}
 			<a href={link} class="flex relative">
 				<svg

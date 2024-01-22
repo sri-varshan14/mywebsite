@@ -5,9 +5,7 @@ import * as index from '$lib'
 
 export async function GET({ }) {
     const posts = await getAllBlogDetail();
-
     const headers = { 'Content-Type': 'application/xml' }
-
     const xml = `
 		<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
 			<channel>

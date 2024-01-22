@@ -41,7 +41,7 @@
 	}
 </script>
 
-<a href={'/writing/' + blog.route}>
+<a href={'/writing' + blog.route}>
 	<div on:mouseenter={mouse_enter} on:mouseleave={mouse_leave}>
 		<div class="flex items-center justify-between py-5">
 			<span class="flex items-center gap-2 {on_hover ? 'opacity-50' : 'opacity-100'}">

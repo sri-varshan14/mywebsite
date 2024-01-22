@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1705690831250,
-      "tag": "0000_yummy_maelstrom",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1705690896292,
-      "tag": "0001_slippery_old_lace",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "5",
-      "when": 1705691127628,
-      "tag": "0002_young_katie_power",
+      "when": 1705930552455,
+      "tag": "0000_magical_gertrude_yorkes",
       "breakpoints": true
     }
   ]

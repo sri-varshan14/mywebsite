@@ -1,9 +1,41 @@
 {
-  "id": "db264db7-f82a-4e00-bbb7-282d180a8f2c",
+  "id": "d279e3f1-4127-47e7-b4cf-4414a77e1348",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
   "tables": {
+    "assets": {
+      "name": "assets",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "route": {
+          "name": "route",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "assets_route_unique": {
+          "name": "assets_route_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "route"
+          ]
+        }
+      }
+    },
     "blogs": {
       "name": "blogs",
       "schema": "",
@@ -15,8 +47,8 @@
           "notNull": true,
           "default": "gen_random_uuid()"
         },
-        "rvalue": {
-          "name": "rvalue",
+        "route": {
+          "name": "route",
           "type": "text",
           "primaryKey": false,
           "notNull": true,
@@ -57,6 +89,13 @@
           "notNull": true,
           "default": "''"
         },
+        "thumbnail": {
+          "name": "thumbnail",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        },
         "date": {
           "name": "date",
           "type": "date",
@@ -69,11 +108,11 @@
       "foreignKeys": {},
       "compositePrimaryKeys": {},
       "uniqueConstraints": {
-        "blogs_rvalue_unique": {
-          "name": "blogs_rvalue_unique",
+        "blogs_route_unique": {
+          "name": "blogs_route_unique",
           "nullsNotDistinct": false,
           "columns": [
-            "rvalue"
+            "route"
           ]
         }
       }

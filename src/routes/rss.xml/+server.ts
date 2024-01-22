@@ -20,7 +20,7 @@ export async function GET({ }) {
 							<title>${post.title}</title>
 							<description>${post.description}</description>
 							<link>${url}/${post.route}</link>
-                            <guid isPermaLink="true">${index.url}/${post.route}</guid>
+                            <guid isPermaLink="true">${index.url}${post.route}</guid>
                             <pubDate> ${new Date(post.date).toUTCString()} </pubDate>
                         </item>
                 `

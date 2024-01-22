@@ -12,3 +12,5 @@ export const load: PageServerLoad = async ({ params }) => {
         content: content
     }
 }
+
+export const prerender = false

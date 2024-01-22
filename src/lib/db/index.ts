@@ -22,4 +22,10 @@ export async function getBlogContent(route: string) {
     }).from(blog).where(eq(blog.route, route));
 }
 
+export async function getBlogRoute() {
+    return await db.select({
+        route: blog.route
+    }).from(blog);
+}
+
 export default db;

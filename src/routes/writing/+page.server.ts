@@ -6,3 +6,6 @@ export const load: PageServerLoad = async ({ params }) => {
         post: await getAllBlogDetail()
     }
 }
+
+export const prerender = 'auto';
+export const trailingSlash = 'always';

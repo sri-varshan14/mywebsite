@@ -19,8 +19,8 @@ export async function GET({ }) {
 						<item>
 							<title>${post.title}</title>
 							<description>${post.description}</description>
-							<link>${url}/${post.route}</link>
-                            <guid isPermaLink="true">${index.url}${post.route}</guid>
+							<link>${index.url}/writing${post.route}</link>
+                            <guid isPermaLink="true">${index.url}/writing${post.route}</guid>
                             <pubDate> ${new Date(post.date).toUTCString()} </pubDate>
                         </item>
                 `

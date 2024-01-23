@@ -10,7 +10,7 @@
 	<title>Blogs | Srivarshan</title>
 </svelte:head>
 
-<div class="py-[14vh] max-w-2xl">
+<div class="py-20 sm:py-5 max-w-2xl">
 	{#each blogs as blog_info}
 		<BlogListSlot blog={blog_info} />
 	{/each}

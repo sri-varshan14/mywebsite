@@ -17,7 +17,6 @@
     "devDependencies": {
         "@catppuccin/tailwindcss": "^0.1.6",
         "@sveltejs/adapter-auto": "^3.0.0",
-        "@sveltejs/adapter-vercel": "^5.1.0",
         "@sveltejs/kit": "^2.0.0",
         "@sveltejs/vite-plugin-svelte": "^3.0.0",
         "autoprefixer": "^10.4.17",
@@ -41,7 +40,6 @@
         "highlight.js": "^11.9.0",
         "marked-gfm-heading-id": "^3.1.2",
         "marked-highlight": "^2.1.0",
-        "postgres": "^3.4.3",
-        "svelte-markdown": "^0.4.1"
+        "postgres": "^3.4.3"
     }
 }

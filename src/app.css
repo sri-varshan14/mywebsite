@@ -71,7 +71,7 @@ p, a, li {
 }
 
 .writing_content pre {
-    @apply bg-ctp-base p-5 
+    @apply bg-ctp-crust p-5 border-[1px] border-ctp-text
 }
 
 .writing_content code {

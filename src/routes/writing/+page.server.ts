@@ -2,7 +2,7 @@ import type { PageServerLoad } from './$types';
 import { getAllBlogDetail } from '$lib/db';
 import type { EntryGenerator } from './[...route]/$types';
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ }) => {
     return {
         post: await getAllBlogDetail()
     }

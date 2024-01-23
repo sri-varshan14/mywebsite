@@ -51,11 +51,11 @@ p, a, li {
 }
 
 .writing_content h1 {
-    @apply font-bold mb-10 sm:mb-4 md:mb-7 text-ctp-lavender;
+    @apply font-bold mb-10 sm:mb-4 md:mb-7 text-ctp-lavender ;
 }
 
 .writing_content h2 {
-    @apply font-semibold mb-1 text-ctp-teal;
+    @apply font-semibold mb-1 !text-ctp-teal;
 }
 
 .writing_content h3 {

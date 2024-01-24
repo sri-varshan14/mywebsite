@@ -34,7 +34,7 @@
 			result +
 			monthName[date.getMonth()] +
 			', ' +
-			date.getDay().toString() +
+			date.getDate().toString() +
 			' ' +
 			date.getFullYear().toString();
 		return result;

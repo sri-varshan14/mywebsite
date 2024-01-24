@@ -3,7 +3,7 @@ import postgres from 'postgres'
 
 import * as dotenv from "dotenv";
 import { blog } from './scheme';
-import { arrayContains, eq } from 'drizzle-orm';
+import { desc, eq } from 'drizzle-orm';
 dotenv.config();
 
 const queryClient = postgres(process.env.DATABASE_URL!, { max: 1 });
@@ -11,7 +11,7 @@ const db = drizzle(queryClient);
 
 
 export async function getAllBlogDetail() {
-    return await db.select().from(blog)
+    return await db.select().from(blog).orderBy(desc(blog.date))
 }
 
 export async function getBlogContent(route: string) {
